@@ -5,7 +5,7 @@ function callMe(name, cb){
     console.log('hellow' + name);
     console.log('your name has '+ name.length + ' charecter');
 
-    doSomething(name)
+    cb(name)
     
 }
 
@@ -14,4 +14,4 @@ function doSomething(name){
     console.log(newName);
 }
 
-callMe('mmoris')
+callMe('mmoris', doSomething)
